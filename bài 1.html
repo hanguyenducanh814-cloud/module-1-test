@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numbers = [15, 2, 30, 4, 45, 10, 60, 7, 20, 15];
+    let sum = 0;
+    let results = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+            results.push(numbers[i]);
+            sum += numbers[i];
+        }
+    }
+    alert("Các số là bội chung của 3 và 5: " + results.join(", ") + "<br>");
+    alert("Tổng của các số trên là: " + sum);
+</script>
+</body>
+</html>
