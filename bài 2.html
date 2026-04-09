@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function roundScore(score) {
+    if (score < 48) {
+      return score;
+    }
+    let nextMultipleOf5 = Math.ceil(score / 5) * 5;
+    if (nextMultipleOf5 - score < 3) {
+      return nextMultipleOf5;
+    } else {
+      return score;
+    }
+  }
+  console.log(roundScore(73));
+  console.log(roundScore(67));
+  console.log(roundScore(44));
+</script>
+</body>
+</html>
