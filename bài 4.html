@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class customer {
+    constructor(id, name, sdt, address, email) {
+      this.id = id;
+      this.name = name;
+      this.sdt = sdt;
+      this.address = address;
+      this.email = email;
+    }
+  }
+  let CustomerList = [
+    new customer("KH001", "Nguyễn Văn A", "0901234567", "Hà Nội", "a@gmail.com"),
+    new customer("KH002", "Trần Thị B", "09739578292", "Hồ Chí Minh", "b@gmail.com")
+  ];
+  function AddCustomer(id, name, sdt, address, email) {
+    let NewCustomer = new customer(id, name, sdt, address, email);
+    CustomerList.push(NewCustomer);
+    alert(" Đã thêm mới khách hàng: " + name);
+  }
+
+  function hienThiDanhSach() {
+    alert(" DANH SÁCH CHI TIẾT KHÁCH HÀNG ");
+    CustomerList.forEach((kh, index) => {
+      alert(`${index + 1}. [${kh.id}] - Name: ${kh.name} - SĐT: ${kh.sdt} - Address: ${kh.address} - Email: ${kh.email}`);
+    });
+  }
+</script>
+</body>
+</html>
